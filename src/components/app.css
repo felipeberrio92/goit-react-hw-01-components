@@ -1,0 +1,23 @@
+:root {
+  --french-gray: #c7c9cdff;
+  --antiflash-white: #f3f6f9ff;
+  --french-gray-2: #bdc4cbff;
+  --white: #fefefeff;
+  --oxford-blue: #0a1c33ff;
+  --alice-blue: #e8edf2ff;
+  --text-label: #bbc3cb;
+  --antiflash-white: #eef2f6ff;
+  --moonstone: #00bdd5ff;
+  --light-blue: #c6dfe3ff;
+  --table-bg: #ecf1f4;
+}
+.app {
+  background-color: var(--french-gray);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0px;
+}
