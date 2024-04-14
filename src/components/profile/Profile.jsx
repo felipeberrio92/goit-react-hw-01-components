@@ -1,5 +1,5 @@
 import './profile.css';
-
+import PropTypes from 'prop-types';
 function Profile(props) {
   return (
     <div className="profile-card">
@@ -28,3 +28,14 @@ function Profile(props) {
 }
 
 export default Profile;
+Profile.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
+};

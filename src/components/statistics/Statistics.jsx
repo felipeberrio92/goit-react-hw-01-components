@@ -1,5 +1,5 @@
 import './statistics.css';
-
+import PropTypes from 'prop-types';
 const COLORS = [
   '#a43cf1ff',
   '#50c3f8ff',
@@ -39,3 +39,13 @@ export default function Statistics(props) {
     </div>
   );
 }
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

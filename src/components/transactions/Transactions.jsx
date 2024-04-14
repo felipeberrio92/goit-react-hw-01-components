@@ -1,5 +1,5 @@
 import './transactions.css';
-
+import PropTypes from 'prop-types';
 export default function Transactions(props) {
   return (
     <div>
@@ -26,3 +26,13 @@ export default function Transactions(props) {
     </div>
   );
 }
+Transactions.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
